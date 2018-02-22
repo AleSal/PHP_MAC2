@@ -13,14 +13,11 @@ if (!empty($http_client_ip)) {
 	$ip_address = $remote_addr;
 }
 
-//$output = shell_exec('arp -n $ip_address'); 
 $mac = `arp $ip_address | cut -d " " -f4`;
 
 
-//echo "<br /> <br />Seu hostname é: $hostname";
-//echo $hostname;  
-echo "<br />Seu Mac é: ";  
+echo "<br /> <br />Your hostname is: $hostname";
+echo $hostname;  
+echo "<br />Your Mac is: ";  
 echo $mac;
-//echo "<pre>$output</pre>"
-
 ?>
